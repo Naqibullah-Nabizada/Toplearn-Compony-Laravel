@@ -1,0 +1,205 @@
+@import '~sweetalert2/src/sweetalert2.scss';
+
+@font-face {
+    font-family: 'msi';
+    src: url('../fonts/Vazir.eot') format('eot');
+    src : url('../fonts/Vazir.ttf') format('truetype'),
+    url('../fonts/Vazir.woff') format('woff');
+}
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body{
+    direction: rtl;
+    font-family: 'vazir';
+    background-color: #1b203d;
+}
+
+
+
+.slidenav{
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background: #272c4a;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.slidenav .logo{
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.slidenav .logo span{
+    color: #f7403b;
+}
+.slidenav .logo.active{
+    opacity: 0;
+    visibility: hidden;
+}
+.slidenav a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 20px 4px 8px;
+    color: #818181;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.slidenav a.is-active{
+    color: #f1f1f1;
+    background: #1b203d;
+}
+
+/* .slidenav a span{
+    display: flex;
+    align-items: center;
+} */
+
+.slidenav a span svg{
+    margin-left: 10px;
+}
+
+#mySlidenav.active{
+    width: 80px;
+}
+
+
+#main{
+    margin-right: 200px;
+    padding: 0 15px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#main.active{
+    margin-right: 100px;
+}
+
+#main .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#main .head .fa-bars{
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#main .head .nav2{
+    color: #fff;
+    font-size: 25px;
+}
+
+#main .head .prof-admin p{
+    color: #fff;
+    font-size: 14px;
+}
+
+#main .head .prof-admin span{
+    color: #8e8e8e;
+    font-size: 12px;
+    display: block;
+}
+
+#main .information{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main .information .col-div-3{
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+}
+
+#main .information .col-div-3 .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #272c4a;
+    padding: 5px 50px;
+}
+
+#main .information .col-div-3 .box .box-icon svg{
+    color: #818181;
+    font-size: 30px;
+}
+#main .information .col-div-3 .box .box-text{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+#main .information .col-div-3 .box .box-text h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #818181;
+    margin-top: 5px;
+}
+
+#main .main-content{
+    padding: 10px;
+    margin-top: 15px;
+    background: #272c4a;
+}
+
+#main .main-content h2{
+    color: #f7403b;
+    margin-bottom: 15px;
+}
+
+#main .main-content table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#main .main-content table tr td,#main .main-content table th{
+    padding: 15px;
+    color: #ddd;
+    text-align: right;
+    border-bottom: 1px solid rgba(126,126,126,.2);
+}
+
+
+
+.icon-a.active{
+    visibility: hidden;
+}
+.icon.active{
+    visibility: visible;
+}
+
+@media screen and (max-width: 992px){
+    #main .information{
+        flex-wrap: wrap;
+    }
+    #main .information .col-div-3{
+        flex: 0 0 calc(100%);
+        max-width: calc(100%);
+        margin-top: 20px;
+    }
+}
